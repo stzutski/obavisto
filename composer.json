@@ -1,0 +1,22 @@
+{
+    "name": "stzutski/obavisto",
+    "authors":[
+    {
+        "name": "Roberto Stzutski",
+        "email": "roberto.stzutski@gmail.com"
+    }
+    
+    ],
+    "require":{
+        "phpmailer/phpmailer": "5.2.22",
+        "slim/slim": "2.0",
+        "rain/raintpl": "3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "vendor\\f2021\\php-classes\\src"
+          }
+      }
+  
+  
+}
