@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "stzutski\\": "vendor\\f2021\\php-classes\\src"
+            "stzutski\\": "vendor\\obavisto\\php-classes\\src"
           }
       }
   
