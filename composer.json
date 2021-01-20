@@ -1,5 +1,5 @@
 {
-    "name": "Stzutski/obavisto",
+    "name": "stzutski/obavisto",
     "authors":[
     {
         "name": "Roberto Stzutski",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Stzutski\\": "vendor\\obavisto\\php-classes\\src"
+            "stzutski\\": "vendor\\stzutski\\php-classes\\src"
           }
       }
   

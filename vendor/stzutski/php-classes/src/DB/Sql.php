@@ -4,7 +4,7 @@ namespace Stzutski\DB;
 
 class Sql {
 
-	const HOSTNAME = "127.0.0.1";
+	const HOSTNAME = "localhost";
 	const USERNAME = "servidor";
 	const PASSWORD = "Nv32125";
 	const DBNAME = "loja";
