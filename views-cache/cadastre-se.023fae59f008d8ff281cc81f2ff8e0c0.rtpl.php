@@ -39,7 +39,7 @@
         <div class="col-12">     
           <div class="login-card">
             <div>
-              <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="res/assets/images/logo/logo-login.png" alt="looginpage"><img class="img-fluid for-dark" src="res/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+              <div><a class="logo" href="login"><img class="img-fluid for-light" src="res/assets/images/logo/logo-login.png" alt="looginpage"><img class="img-fluid for-dark" src="res/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
               <div class="login-main"> 
                 <form class="theme-form">
                   <h4>Criar Conta</h4>

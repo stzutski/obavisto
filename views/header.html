@@ -32,6 +32,7 @@
     <link id="color" rel="stylesheet" href="res/assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="res/assets/css/responsive.css">
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/> -->
   </head>
   <body>
     <!-- tap on top starts-->
@@ -54,12 +55,12 @@
             </div>
           </form>
           <div class="header-logo-wrapper">
-            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="res/assets/images/logo/logo-login.png" alt=""></a></div>
+            <div class="logo-wrapper"><a href=""><img class="img-fluid" src="res/assets/images/logo/logo.png" alt=""></a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="grid" id="sidebar-toggle"> </i></div>
           </div>
           <div class="left-header col horizontal-wrapper pl-0">
             <ul class="horizontal-menu">
-              <!-- <li class="mega-menu"><a class="nav-link" href="#"><i data-feather="layers"></i><span>Bonus Ui...</span></a> -->
+              <!-- <li class="mega-menu"><a class="nav-link" href="#"><i data-feather="layers"></i><span>Bonus Ui</span></a>
                 <div class="mega-menu-container nav-submenu">
                   <div class="container-fluid">
                     <div class="row">
@@ -148,12 +149,12 @@
                     </div>
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
-              <li class="language-nav">
+              <!-- <li class="language-nav">
                 <div class="translate_wrapper">
                   <div class="current_lang">
                     <div class="lang"><i class="flag-icon flag-icon-us"></i><span class="lang-txt">EN                               </span></div>
@@ -168,14 +169,14 @@
                     <div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span class="lang-txt">لعربية <span> (ae)</span></span></div>
                   </div>
                 </div>
-              </li>
+              </li> -->
               <li>                         <span class="header-search"><i data-feather="search"></i></span></li>
               <li class="onhover-dropdown">
                 <div class="notification-box"><i data-feather="bell"></i><span class="badge badge-pill badge-secondary">4</span></div>
                 <ul class="notification-dropdown onhover-show-div">
                   <li class="bg-primary text-center">
-                    <h6 class="f-18 mb-0">Notitication</h6>
-                    <p class="mb-0">You have 4 new notification</p>
+                    <h6 class="f-18 mb-0">Notificações</h6>
+                    <p class="mb-0">4 novas notificações</p>
                   </li>
                   <li>
                     <p><i class="fa fa-circle-o mr-3 font-primary"> </i>Delivery processing <span class="pull-right">10 min.</span></p>
@@ -199,8 +200,8 @@
                 <div class="cart-box"><i data-feather="shopping-cart"></i><span class="badge badge-pill badge-primary">2</span></div>
                 <ul class="cart-dropdown chat-dropdown onhover-show-div">
                   <li class="bg-primary text-center">
-                    <h6 class="f-18 mb-0">Shoping cart</h6>
-                    <p class="mb-0">You have 3 items in your cart</p>
+                    <h6 class="f-18 mb-0">Pedidos</h6>
+                    <p class="mb-0">Meus pedidos</p>
                   </li>
                   <li class="mt-0">
                     <div class="media"><img class="img-fluid rounded-circle mr-3 img-60" src="res/assets/images/ecommerce/01.jpg" alt="">
@@ -280,16 +281,17 @@
               <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
               <li class="profile-nav onhover-dropdown p-0 mr-0">
                 <div class="media profile-media"><img class="b-r-10" src="res/assets/images/dashboard/profile.jpg" alt="">
-                  <div class="media-body"><span>Emay Walter</span>
+                  <div class="media-body"><span>Nome usuário</span>
                     <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
                   </div>
                 </div>
                 <ul class="profile-dropdown onhover-show-div">
-                  <li><i data-feather="user"></i><span>Account </span></li>
+                  <li><i data-feather="user"> </i><span><a href="perfil">Perfil</a></span></li>
                   <li><i data-feather="mail"></i><span>Inbox</span></li>
-                  <li><i data-feather="file-text"></i><span>Taskboard</span></li>
-                  <li><i data-feather="settings"></i><span>Settings</span></li>
-                  <li><i data-feather="log-out"> </i><span>Sair</span></li>
+                  <!-- <li><i data-feather="file-text"></i><span>Taskboard</span></li>
+                  <li><i data-feather="settings"></i><span>Settings</span></li> -->
+                  <li><i data-feather="log-in"> </i><span><a href="login">Log in</a></span></li>
+                  <li><i data-feather="log-out"> </i><span><a href="login">Log out</a></span></li>
                 </ul>
               </li>
             </ul>
@@ -306,3 +308,82 @@
         </div>
       </div>
       <!-- Page Header Ends                              -->
+
+
+
+
+
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper horizontal-menu">
+        <!-- Page Sidebar Start-->
+        <div class="sidebar-wrapper">
+          <div class="logo-wrapper"><a href="http://localhost/labs/obavisto/"><img class="img-fluid" src="res/assets/images/logo/logo.png" alt=""></a></div>
+          <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid" src="res/assets/images/logo/logo-icon.png" alt=""></a></div>
+          <nav>
+            <div class="sidebar-main">
+              <div id="sidebar-menu">
+                <ul class="sidebar-links custom-scrollbar">
+                  <li class="back-btn">
+                    <div class="mobile-back text-right"><span>Back</span><i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
+                  </li>
+
+                  <li class="sidebar-list">
+                    <a class="nav-link sidebar-title" href="teste">
+                      <i data-feather="file-text"></i><span>Teste</span></a>
+                  </li>
+
+                  <li class="sidebar-list">
+                    <a class="nav-link sidebar-title" href="cadastre-se">
+                      <i data-feather="file-text"></i><span>Cadastro</span></a>
+                  </li>
+                  
+                  <li class="sidebar-list">
+                    <a class="nav-link sidebar-title" href="confirmar-seu-cadastro">
+                      <i data-feather="file-text"></i><span>Confirme seu cadastro</span></a>
+                  </li>
+
+                  <li class="sidebar-list">
+                    <a class="nav-link sidebar-title" href="login">
+                      <i data-feather="file-text"></i><span>Login</span></a>
+                  </li>
+
+                  <li class="sidebar-list">
+                    <a class="nav-link sidebar-title" href="suporte">
+                      <i data-feather="file-text"></i><span>Dúvidas Frequentes</span></a>
+                  </li>
+
+
+
+                  <li class="sidebar-list"><a class="nav-link sidebar-title" href="../theme/index.html" target="_blank"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                  <li class="sidebar-list"><a class="nav-link sidebar-title" href="#"><i data-feather="anchor"></i><span>Starter kit</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a class="submenu-title" href="#">color version<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="index.html">Layout Light</a></li>
+                          <li><a href="layout-dark.html">Layout Dark</a></li>
+                        </ul>
+                      </li>
+                      <li>     <a class="submenu-title" href="#">Page layout<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="boxed.html">Boxed</a></li>
+                          <li><a href="layout-rtl.html">RTL</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="submenu-title" href="hide-on-scroll.html"><span>Hide menu on Scroll</span></a></li>
+                      <li>     <a class="submenu-title" href="#">Footers<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
+                        <ul class="nav-sub-childmenu submenu-content">
+                          <li><a href="footer-light.html">Footer Light</a></li>
+                          <li><a href="footer-dark.html">Footer Dark</a></li>
+                          <li><a href="footer-fixed.html">Footer Fixed</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><a class="nav-link sidebar-title" href="http://support.pixelstrap.com/help-center" target="_blank"><i data-feather="headphones"></i><span>Raise Support</span></a></li>
+                  <li class="sidebar-list"><a class="nav-link sidebar-title" href="../document/index.html" target="_blank"><i data-feather="file-text"></i><span>Documentation</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Page Sidebar Ends-->
