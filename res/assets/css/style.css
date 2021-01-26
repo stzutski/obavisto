@@ -27856,3 +27856,18 @@ body[class*='dark-'] .for-light {
 /**=====================
     63. Box-layout CSS ends
 ==========================**/
+
+
+/**=====================
+    64. Custom CSS start
+==========================**/
+
+.cursor-pointer{
+  cursor:pointer !important;
+}
+
+
+
+/**=====================
+    64. Custom CSS start
+==========================**/

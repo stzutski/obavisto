@@ -6,7 +6,10 @@ use stzutski\Page;
 $app->get('/', function(){
 
     $page = new Page([
-        "data"=>array("NAVLEVEL"=>"master")
+        "data"=>array(
+                "titleApp"=>TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>"master")
     ]);
     $page->setTpl("home");
   
@@ -16,6 +19,8 @@ $app->get('/', function(){
 $app->get('/login', function(){
 
     $page = new Page([
+        "titleApp"=>TITLEAPP,
+        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false
     ]);
@@ -26,6 +31,8 @@ $app->get('/login', function(){
 $app->get('/logout', function(){
 
     $page = new Page([
+        "titleApp"=>TITLEAPP,
+        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false
     ]);
@@ -37,6 +44,8 @@ $app->get('/logout', function(){
 $app->get('/cadastre-se', function(){
 
     $page = new Page([
+        "titleApp"=>TITLEAPP,
+        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false
     ]);
@@ -47,6 +56,8 @@ $app->get('/cadastre-se', function(){
 $app->get('/confirmar-seu-cadastro', function(){
 
     $page = new Page([
+        "titleApp"=>TITLEAPP,
+        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false
     ]);
@@ -57,6 +68,8 @@ $app->get('/confirmar-seu-cadastro', function(){
 $app->get('/confirmacao-de-cadastro', function(){
 
     $page = new Page([
+        "titleApp"=>TITLEAPP,
+        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false
     ]);

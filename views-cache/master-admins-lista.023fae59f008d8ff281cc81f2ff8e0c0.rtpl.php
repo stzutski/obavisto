@@ -10,18 +10,8 @@
           Podem criar sub administradores apenas com permissão de trabalho <code>"EX: FUNCIONÁRIOS DA EMPRESA"</code>.
         </span>
         <h6 class="font-danger"><small>* Para alterar um cadastro clique sobre o nome do administrador.</small></h6>
-<!--           
-          Often you may want to have your table resize dynamically with the page. Typically this is done by assigning
-          <code>width:100%</code> in your CSS, but this
-          presents a problem for Javascript since it can be very hard to get that relative size rather than the absolute
-          pixels. As such, if you apply the<code>width</code> attribute to the HTML table tag or inline width style
-          (<code>style="width:100%"</code>), it will be used as the width for the table
-          (overruling any CSS styles).</span><span>This example shows a table with <code>width="80%"</code> and the
-          container is also flexible width, so as the window is resized, the table will also resize
-          dynamically.</span> -->
       </div>
       <div class="card-body">
-        <div class="table-responsive">
           <table class="display" id="basic-8">
             <thead>
               <tr>
@@ -78,7 +68,6 @@
               </tr>
             </tfoot>
           </table>
-        </div>
       </div>
     </div>
 

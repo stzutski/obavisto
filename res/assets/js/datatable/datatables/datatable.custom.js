@@ -40,7 +40,11 @@ $(document).ready(function() {
     $('#basic-7').DataTable({
         "dom": '<"wrapper"ltipf>'
     });
-    $('#basic-8').DataTable();
+    $('#basic-8').DataTable({
+        "language": {
+            "url": "res/assets/json/Portuguese-Brasil.json"
+        }
+    });
     $('#basic-9').DataTable({
         stateSave: true
     });
@@ -118,7 +122,7 @@ $(document).ready(function() {
     });
     $('#advance-8').DataTable({
         "language": {
-            "url": "../assets/json/German.json"
+            "url": "res/assets/json/Portuguese-Brasil.json"
         }
     });
     $('#advance-9').DataTable({
@@ -291,7 +295,7 @@ $(document).ready(function() {
     // Setup - add a text input to each footer cell
     $('#API-2 tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        $(this).html( '<input type="text" placeholder="Buscar '+title+'" />' );
     } );
     var table = $('#API-2').DataTable();
     table.columns().every( function () {

@@ -1,4 +1,4 @@
-<!-- start page-body -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- start page-body -->
 <div class="page-body">
   <div class="container-fluid">
   <!-- start container-fluid -->

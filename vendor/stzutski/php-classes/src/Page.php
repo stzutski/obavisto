@@ -26,11 +26,11 @@ class Page {
 		$config = array(
 			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
 			"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/labs/obavisto/views-cache/",
-			"debug"         => false
+            "debug"         => false,
 	    );
 
-        //var_dump($config);
-        //exit;
+        // var_dump($this->options["data"]);
+        // exit;
 
 
 		Tpl::configure( $config );
