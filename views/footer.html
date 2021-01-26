@@ -25,6 +25,8 @@
     <script src="res/assets/js/sidebar-menu.js"></script>
     <script src="res/assets/js/config.js"></script>
     <!-- Plugins JS start-->
+    <script src="res/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="res/assets/js/datatable/datatables/datatable.custom.js"></script>
     <script src="res/assets/js/prism/prism.min.js"></script>
     <script src="res/assets/js/clipboard/clipboard.min.js"></script>
     <script src="res/assets/js/custom-card/custom-card.js"></script>

@@ -1,4 +1,8 @@
 <?php
+/*
+arquivo loader dos templates para as pags comuns
+ex: raiz, login, recuperar senha e confirmar cadastro
+*/
 
 namespace stzutski;
 
@@ -14,28 +18,32 @@ class Page {
         "data"=>[]
     ];
 
-    public function __construct($opts=array())
-    {
 
-    $this->options = array_merge($this->defaults, $opts);
+	public function __construct($opts = array(), $tpl_dir = "/labs/obavisto/views/"){
+		
+		$this->options = array_merge($this->defaults, $opts);
 
-	// config
-	$config = array(
-        "tpl_dir"       => $_SERVER['DOCUMENT_ROOT'] . "/labs/obavisto/views/",
-        "cache_dir"     => $_SERVER['DOCUMENT_ROOT'] . "/labs/obavisto/views-cache/",
-        "debug"         => false // set to false to improve the speed
-       );
+		$config = array(
+			"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
+			"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/labs/obavisto/views-cache/",
+			"debug"         => false
+	    );
 
-       Tpl::configure( $config );
-
-       $this->tpl = new Tpl;
-
-       $this->setData($this->options["data"]);
+        //var_dump($config);
+        //exit;
 
 
-       if($this->options["header"] === true) $this->tpl->draw("header");
-    
-    }
+		Tpl::configure( $config );
+
+		$this->tpl = new Tpl;
+
+		$this->setData($this->options["data"]);
+
+		if ($this->options["header"] === true) $this->tpl->draw("header");
+
+	}
+
+
 
     private function setData($data = array()){
 
