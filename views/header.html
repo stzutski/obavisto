@@ -190,7 +190,7 @@
                 <!-- <li><i data-feather="file-text"></i><span>Taskboard</span></li>
                   <li><i data-feather="settings"></i><span>Settings</span></li> -->
                 <li><i data-feather="log-in"> </i><span><a href="login">Log in</a></span></li>
-                <li><i data-feather="log-out"> </i><span><a href="login">Log out</a></span></li>
+                <li><i data-feather="log-out"> </i><span><a href="logout">Log out</a></span></li>
               </ul>
             </li>
           </ul>

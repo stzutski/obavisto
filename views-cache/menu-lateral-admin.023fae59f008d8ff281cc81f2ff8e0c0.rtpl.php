@@ -1,5 +1,5 @@
-<li class="sidebar-list">
-  <a class="nav-link sidebar-title" href="{$urlApp}">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><li class="sidebar-list">
+  <a class="nav-link sidebar-title" href="<?php echo htmlspecialchars( $urlApp, ENT_COMPAT, 'UTF-8', FALSE ); ?>">
     <i data-feather="file-text"></i><span>Dashboard</span></a>
 </li>
 
