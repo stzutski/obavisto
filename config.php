@@ -1,4 +1,6 @@
-<?php 
+<?php
+session_start();
+if(!isSet($_SESSION['TITAPP'])) $_SESSION['TITAPP'] = '';
 
 /* configurações globais do sistema
 */

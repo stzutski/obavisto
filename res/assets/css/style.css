@@ -27862,11 +27862,21 @@ body[class*='dark-'] .for-light {
     64. Custom CSS start
 ==========================**/
 
-.cursor-pointer{
+.cursor-pointer * {
   cursor:pointer !important;
 }
 
+.notransition * { 
+  -webkit-transition: none !important; 
+  -moz-transition: none !important; 
+  -o-transition: none !important; 
+  -ms-transition: none !important; 
+  transition: none !important; 
+}
 
+.ptop-30{
+  padding-top:30px !important;
+}
 
 /**=====================
     64. Custom CSS start

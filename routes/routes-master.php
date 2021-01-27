@@ -7,7 +7,7 @@ $app->get('/administradores', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Administradores do Sistema',
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -16,11 +16,11 @@ $app->get('/administradores', function(){
 });
 
 
-$app->get('/administradores/cadastro', function(){
+$app->get('/administradores/cadastro/:uid', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Administrador',
+                "titleApp"=>TITLEAPP . ' - Cadastro de Administrador' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -33,7 +33,7 @@ $app->get('/empresas', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Empresas do Sistema',
+                "titleApp"=>TITLEAPP . ' - Empresas do Sistema' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -42,11 +42,11 @@ $app->get('/empresas', function(){
 });
 
 
-$app->get('/empresas/cadastro', function(){
+$app->get('/empresas/cadastro/:uid', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Empresas',
+                "titleApp"=>TITLEAPP . ' - Cadastro de Empresas' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -61,7 +61,7 @@ $app->get('/configuracoes-globais', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Configurações Globais',
+                "titleApp"=>TITLEAPP . ' - Configurações Globais' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -75,7 +75,7 @@ $app->get('/gateways', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Portais de Pagamento',
+                "titleApp"=>TITLEAPP . ' - Portais de Pagamento' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -85,11 +85,11 @@ $app->get('/gateways', function(){
 
 
 
-$app->get('/gateways/configurar', function(){
+$app->get('/gateways/configurar/:uid', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Configuração de Portal de Pagamento',
+                "titleApp"=>TITLEAPP . ' - Configuração de Portal de Pagamento' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -104,7 +104,7 @@ $app->get('/servicos', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Serviços Cadastrados',
+                "titleApp"=>TITLEAPP . ' - Serviços Cadastrados' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
@@ -113,15 +113,28 @@ $app->get('/servicos', function(){
 });
 
 
-$app->get('/servicos/cadastro', function(){
+$app->get('/servicos/cadastro/:uid', function(){
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Serviço',
+                "titleApp"=>TITLEAPP . ' - Cadastro de Serviço' . ' - ' . $_SESSION['TITAPP'],
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>"master")
     ]);
     $page->setTpl("master-servicos-cad");
+
+});
+
+
+$app->get('/servicos/cadastro/etapas', function(){
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Cadastro de Etapas do Serviço' . ' - ' . $_SESSION['TITAPP'],
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>"master")
+    ]);
+    $page->setTpl("master-servicos-etapas-cad");
 
 });
 

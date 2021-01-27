@@ -10,7 +10,7 @@
   <meta name="keywords"
     content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
   <meta name="author" content="pixelstrap">
-  <base href="http://localhost/labs/obavisto/">
+  <base href="<?php echo htmlspecialchars( $urlApp, ENT_COMPAT, 'UTF-8', FALSE ); ?>">
   <link rel="icon" href="res/assets/images/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="res/assets/images/favicon.png" type="image/x-icon">
   <title><?php echo htmlspecialchars( $titleApp, ENT_COMPAT, 'UTF-8', FALSE ); ?></title>
@@ -30,7 +30,9 @@
   <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/feather-icon.css">
   <!-- Plugins css start-->
   <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/datatables.css">
-  <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/prism.css">
+  <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/animate.css">
+  <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/chartist.css">
+  <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/date-picker.css">
   <!-- Plugins css Ends-->
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="res/assets/css/vendors/bootstrap.css">
@@ -39,10 +41,9 @@
   <link id="color" rel="stylesheet" href="res/assets/css/color-1.css" media="screen">
   <!-- Responsive css-->
   <link rel="stylesheet" type="text/css" href="res/assets/css/responsive.css">
-  <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/> -->
 </head>
 
-<body>
+<body class="notransition">
   <!-- tap on top starts-->
   <div class="tap-top"><i data-feather="chevrons-up"></i></div>
   <!-- tap on tap ends-->
