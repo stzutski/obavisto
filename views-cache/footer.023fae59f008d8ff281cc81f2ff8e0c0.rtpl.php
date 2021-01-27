@@ -1,5 +1,5 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><!-- footer start-->
-        <footer class="footer footer-fix">
+        <footer class="footer">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12 footer-copyright">

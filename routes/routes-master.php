@@ -126,7 +126,7 @@ $app->get('/servicos/cadastro/:uid', function(){
 });
 
 
-$app->get('/servicos/cadastro/etapas', function(){
+$app->get('/servicos/cadastro/etapas/:uid', function(){
 
     $page = new Page([
         "data"=>array(

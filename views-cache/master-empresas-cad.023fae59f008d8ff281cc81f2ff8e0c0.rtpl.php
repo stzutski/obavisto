@@ -15,38 +15,488 @@
         <h6 class="font-primary"><small>* Informe os dados do formulário e clique em <b>SALVAR DADOS</b>, ou <button
               type="button" class="btn btn-danger btn-xs">Clique aqui para excluir</button></small></h6>
       </div>
-        <!-- end card header  -->
-        <!-- start view content  -->
+      <!-- end card header  -->
+      <!-- start view content  -->
 
 
 
 
-          <div class="card-body">
-            <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
-              <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="true"><i class="icofont icofont-ui-home"></i>Home</a></li>
-              <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false"><i class="icofont icofont-man-in-glasses"></i>Profile</a></li>
-              <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false"><i class="icofont icofont-contacts"></i>Contact</a></li>
-            </ul>
-            <div class="tab-content" id="top-tabContent">
-              <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-              </div>
-              <div class="tab-pane fade" id="top-profile" role="tabpanel" aria-labelledby="profile-top-tab">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-              </div>
-              <div class="tab-pane fade" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-              </div>
+      <div class="card-body">
+        <form class="form-horizontal">
+
+
+          <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-toggle="tab" href="#top-home"
+                role="tab" aria-controls="top-home" aria-selected="true"><i
+                  class="icofont icofont-ui-home"></i>GERAL</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-toggle="tab" href="#top-profile"
+                role="tab" aria-controls="top-profile" aria-selected="false"><i
+                  class="icofont icofont-man-in-glasses"></i>CONTATOS</a></li>
+            <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-toggle="tab" href="#top-contact"
+                role="tab" aria-controls="top-contact" aria-selected="false"><i
+                  class="icofont icofont-contacts"></i>ENDEREÇOS</a></li>
+          </ul>
+          <div class="tab-content" id="top-tabContent">
+            <div class="tab-pane fade show active" id="top-home" role="tabpanel" aria-labelledby="top-home-tab">
+
+              <fieldset>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Razão Social</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: ACME Inc"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Nome Fantasia</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: ACME"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">CNPJ</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="placeholder"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Insc. Estadual</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="000000000"
+                      class="form-control btn-square input-md">
+                    <p class="help-block">Informar "ISENTA" caso não possua</p>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Insc. Municipal</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="000000000"
+                      class="form-control btn-square input-md">
+                    <p class="help-block">Informar "ISENTA" caso não possua</p>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Regime</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text"
+                      placeholder="ex: Lucro Real, Lucro Presumido, Simples Nacional"
+                      class="form-control btn-square input-md">
+                    <p class="help-block"><b>Nota:</b> empresas <b>MEI</b> são regida pelo <b>Simples Nacional</b></p>
+                  </div>
+                </div>
+
+              </fieldset>
+
+
+            </div>
+            <div class="tab-pane fade" id="top-profile" role="tabpanel" aria-labelledby="profile-top-tab">
+
+
+
+
+              <fieldset>
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Telefone Comercial</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: 99 99999999"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Telefone Celular</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: 99 999999999"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">E-mail</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: meu@email.com.br"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Website</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: https://meusite.com.br"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Facebook</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Instagram</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Youtube</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Twitter</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+
+              </fieldset>
+
+
+
+
+            </div>
+            <div class="tab-pane fade" id="top-contact" role="tabpanel" aria-labelledby="contact-top-tab">
+
+
+
+
+              <fieldset>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Endereço</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: Rua Machado de Assis"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Número</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: 99"
+                      class="form-control btn-square input-md">
+                    <p class="help-block">Informar "SN" caso não possua</p>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Complento</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: Sala 112"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">CEP</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: 12345-678"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Bairro</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: Centro"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="textinput">Cidade</label>
+                  <div class="col-lg-12">
+                    <input id="textinput" name="textinput" type="text" placeholder="ex: Cidade do Cabo"
+                      class="form-control btn-square input-md">
+                  </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="selectbasic">UF</label>
+                  <div class="col-lg-12">
+                    <select id="selectbasic" name="selectbasic" class="form-control btn-square">
+                      <option value="">Selecione</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                  </div>
+                </div>
+
+
+                <!-- Select Basic -->
+                <div class="form-group row">
+                  <label class="col-lg-12 control-label text-lg-left" for="selectbasic">PAÍS</label>
+                  <div class="col-lg-12">
+                    <select id="selectbasic" name="selectbasic" class="form-control btn-square">
+                      <option value="">Selecione</option>
+                      <option value="África do Sul">África do Sul</option>
+                      <option value="Albânia">Albânia</option>
+                      <option value="Alemanha">Alemanha</option>
+                      <option value="Andorra">Andorra</option>
+                      <option value="Angola">Angola</option>
+                      <option value="Anguilla">Anguilla</option>
+                      <option value="Antigua">Antigua</option>
+                      <option value="Arábia Saudita">Arábia Saudita</option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Armênia">Armênia</option>
+                      <option value="Aruba">Aruba</option>
+                      <option value="Austrália">Austrália</option>
+                      <option value="Áustria">Áustria</option>
+                      <option value="Azerbaijão">Azerbaijão</option>
+                      <option value="Bahamas">Bahamas</option>
+                      <option value="Bahrein">Bahrein</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Barbados">Barbados</option>
+                      <option value="Bélgica">Bélgica</option>
+                      <option value="Benin">Benin</option>
+                      <option value="Bermudas">Bermudas</option>
+                      <option value="Botsuana">Botsuana</option>
+                      <option value="Brasil" selected>Brasil</option>
+                      <option value="Brunei">Brunei</option>
+                      <option value="Bulgária">Bulgária</option>
+                      <option value="Burkina Fasso">Burkina Fasso</option>
+                      <option value="botão">botão</option>
+                      <option value="Cabo Verde">Cabo Verde</option>
+                      <option value="Camarões">Camarões</option>
+                      <option value="Camboja">Camboja</option>
+                      <option value="Canadá">Canadá</option>
+                      <option value="Cazaquistão">Cazaquistão</option>
+                      <option value="Chade">Chade</option>
+                      <option value="Chile">Chile</option>
+                      <option value="China">China</option>
+                      <option value="Cidade do Vaticano">Cidade do Vaticano</option>
+                      <option value="Colômbia">Colômbia</option>
+                      <option value="Congo">Congo</option>
+                      <option value="Coréia do Sul">Coréia do Sul</option>
+                      <option value="Costa do Marfim">Costa do Marfim</option>
+                      <option value="Costa Rica">Costa Rica</option>
+                      <option value="Croácia">Croácia</option>
+                      <option value="Dinamarca">Dinamarca</option>
+                      <option value="Djibuti">Djibuti</option>
+                      <option value="Dominica">Dominica</option>
+                      <option value="EUA">EUA</option>
+                      <option value="Egito">Egito</option>
+                      <option value="El Salvador">El Salvador</option>
+                      <option value="Emirados Árabes">Emirados Árabes</option>
+                      <option value="Equador">Equador</option>
+                      <option value="Eritréia">Eritréia</option>
+                      <option value="Escócia">Escócia</option>
+                      <option value="Eslováquia">Eslováquia</option>
+                      <option value="Eslovênia">Eslovênia</option>
+                      <option value="Espanha">Espanha</option>
+                      <option value="Estônia">Estônia</option>
+                      <option value="Etiópia">Etiópia</option>
+                      <option value="Fiji">Fiji</option>
+                      <option value="Filipinas">Filipinas</option>
+                      <option value="Finlândia">Finlândia</option>
+                      <option value="França">França</option>
+                      <option value="Gabão">Gabão</option>
+                      <option value="Gâmbia">Gâmbia</option>
+                      <option value="Gana">Gana</option>
+                      <option value="Geórgia">Geórgia</option>
+                      <option value="Gibraltar">Gibraltar</option>
+                      <option value="Granada">Granada</option>
+                      <option value="Grécia">Grécia</option>
+                      <option value="Guadalupe">Guadalupe</option>
+                      <option value="Guam">Guam</option>
+                      <option value="Guatemala">Guatemala</option>
+                      <option value="Guiana">Guiana</option>
+                      <option value="Guiana Francesa">Guiana Francesa</option>
+                      <option value="Guiné-bissau">Guiné-bissau</option>
+                      <option value="Haiti">Haiti</option>
+                      <option value="Holanda">Holanda</option>
+                      <option value="Honduras">Honduras</option>
+                      <option value="Hong Kong">Hong Kong</option>
+                      <option value="Hungria">Hungria</option>
+                      <option value="Iêmen">Iêmen</option>
+                      <option value="Ilhas Cayman">Ilhas Cayman</option>
+                      <option value="Ilhas Cook">Ilhas Cook</option>
+                      <option value="Ilhas Curaçao">Ilhas Curaçao</option>
+                      <option value="Ilhas Marshall">Ilhas Marshall</option>
+                      <option value="Ilhas Turks & Caicos">Ilhas Turks & Caicos</option>
+                      <option value="Ilhas Virgens (brit.)">Ilhas Virgens (brit.)</option>
+                      <option value="Ilhas Virgens(amer.)">Ilhas Virgens(amer.)</option>
+                      <option value="Ilhas Wallis e Futuna">Ilhas Wallis e Futuna</option>
+                      <option value="Índia">Índia</option>
+                      <option value="Indonésia">Indonésia</option>
+                      <option value="Inglaterra">Inglaterra</option>
+                      <option value="Irlanda">Irlanda</option>
+                      <option value="Islândia">Islândia</option>
+                      <option value="Israel">Israel</option>
+                      <option value="Itália">Itália</option>
+                      <option value="Jamaica">Jamaica</option>
+                      <option value="Japão">Japão</option>
+                      <option value="Jordânia">Jordânia</option>
+                      <option value="Kuwait">Kuwait</option>
+                      <option value="Latvia">Latvia</option>
+                      <option value="Líbano">Líbano</option>
+                      <option value="Liechtenstein">Liechtenstein</option>
+                      <option value="Lituânia">Lituânia</option>
+                      <option value="Luxemburgo">Luxemburgo</option>
+                      <option value="Macau">Macau</option>
+                      <option value="Macedônia">Macedônia</option>
+                      <option value="Madagascar">Madagascar</option>
+                      <option value="Malásia">Malásia</option>
+                      <option value="Malaui">Malaui</option>
+                      <option value="Mali">Mali</option>
+                      <option value="Malta">Malta</option>
+                      <option value="Marrocos">Marrocos</option>
+                      <option value="Martinica">Martinica</option>
+                      <option value="Mauritânia">Mauritânia</option>
+                      <option value="Mauritius">Mauritius</option>
+                      <option value="México">México</option>
+                      <option value="Moldova">Moldova</option>
+                      <option value="Mônaco">Mônaco</option>
+                      <option value="Montserrat">Montserrat</option>
+                      <option value="Nepal">Nepal</option>
+                      <option value="Nicarágua">Nicarágua</option>
+                      <option value="Niger">Niger</option>
+                      <option value="Nigéria">Nigéria</option>
+                      <option value="Noruega">Noruega</option>
+                      <option value="Nova Caledônia">Nova Caledônia</option>
+                      <option value="Nova Zelândia">Nova Zelândia</option>
+                      <option value="Omã">Omã</option>
+                      <option value="Palau">Palau</option>
+                      <option value="Panamá">Panamá</option>
+                      <option value="Papua-nova Guiné">Papua-nova Guiné</option>
+                      <option value="Paquistão">Paquistão</option>
+                      <option value="Peru">Peru</option>
+                      <option value="Polinésia Francesa">Polinésia Francesa</option>
+                      <option value="Polônia">Polônia</option>
+                      <option value="Porto Rico">Porto Rico</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Qatar">Qatar</option>
+                      <option value="Quênia">Quênia</option>
+                      <option value="Rep. Dominicana">Rep. Dominicana</option>
+                      <option value="Rep. Tcheca">Rep. Tcheca</option>
+                      <option value="Reunion">Reunion</option>
+                      <option value="Romênia">Romênia</option>
+                      <option value="Ruanda">Ruanda</option>
+                      <option value="Rússia">Rússia</option>
+                      <option value="Saipan">Saipan</option>
+                      <option value="Samoa Americana">Samoa Americana</option>
+                      <option value="Senegal">Senegal</option>
+                      <option value="Serra Leone">Serra Leone</option>
+                      <option value="Seychelles">Seychelles</option>
+                      <option value="Singapura">Singapura</option>
+                      <option value="Síria">Síria</option>
+                      <option value="Sri Lanka">Sri Lanka</option>
+                      <option value="St. Kitts & Nevis">St. Kitts & Nevis</option>
+                      <option value="St. Lúcia">St. Lúcia</option>
+                      <option value="St. Vincent">St. Vincent</option>
+                      <option value="Sudão">Sudão</option>
+                      <option value="Suécia">Suécia</option>
+                      <option value="Suiça">Suiça</option>
+                      <option value="Suriname">Suriname</option>
+                      <option value="Tailândia">Tailândia</option>
+                      <option value="Taiwan">Taiwan</option>
+                      <option value="Tanzânia">Tanzânia</option>
+                      <option value="Togo">Togo</option>
+                      <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                      <option value="Tunísia">Tunísia</option>
+                      <option value="Turquia">Turquia</option>
+                      <option value="Ucrânia">Ucrânia</option>
+                      <option value="Uganda">Uganda</option>
+                      <option value="Uruguai">Uruguai</option>
+                      <option value="Venezuela">Venezuela</option>
+                      <option value="Vietnã">Vietnã</option>
+                      <option value="Zaire">Zaire</option>
+                      <option value="Zâmbia">Zâmbia</option>
+                      <option value="Zimbábue">Zimbábue</option>
+                    </select>
+                  </div>
+                </div>
+
+
+              </fieldset>
+
+
+
+
+
             </div>
           </div>
-      
+
+          <!-- Button -->
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <button id="singlebutton" name="singlebutton" class="btn btn-primary">SALVAR DADOS</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
 
 
 
 
-        <!-- end view content  -->
-        <!-- start card footer  -->
+
+      <!-- end view content  -->
+      <!-- start card footer  -->
     </div>
     <!-- end card footer  -->
 
