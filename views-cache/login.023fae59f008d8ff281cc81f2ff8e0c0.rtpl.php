@@ -68,7 +68,7 @@
                       <a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a>
                     </div> -->
                   </div>
-                  <p class="mt-4 mb-0">Novo usuário?<a class="ml-2" href="cadastre-se">criei sua conta grátis</a></p>
+                  <p class="mt-4 mb-0">Novo usuário?<a class="ml-2" href="cadastro">criei sua conta grátis</a></p>
                 </form>
               </div>
             </div>

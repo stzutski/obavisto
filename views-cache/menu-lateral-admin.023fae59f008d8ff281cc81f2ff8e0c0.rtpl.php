@@ -5,7 +5,13 @@
 
 <li class="sidebar-list"><a class="nav-link sidebar-title cursor-pointer"><i data-feather="dollar-sign"></i><span>Financeiro</span></a>
   <ul class="sidebar-submenu">
-    <li><a href="financeiro">Pedidos</a></li>
+    <li><a href="financeiro/pedidos">Pedidos</a></li>
+  </ul>
+</li>
+
+<li class="sidebar-list"><a class="nav-link sidebar-title cursor-pointer"><i data-feather="briefcase"></i><span>Serviços</span></a>
+  <ul class="sidebar-submenu">
+    <li><a href="servicos/listar">Listar</a></li>
   </ul>
 </li>
 

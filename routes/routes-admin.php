@@ -3,7 +3,7 @@
 use stzutski\Page;
 
 
-$app->get('/financeiro', function(){
+$app->get('/financeiro/pedidos', function(){
 
     $page = new Page([
         "data"=>array(
@@ -11,7 +11,7 @@ $app->get('/financeiro', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-financeiro");
+    $page->setTpl("admin-financeiro-pedidos");
 
 });
 
