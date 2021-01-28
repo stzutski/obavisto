@@ -9,10 +9,12 @@ $app->get('/', function(){
     if(!isSet($_SESSION['usersys']) || $_SESSION['usersys']==''){
 
     $page = new Page([
-        "titleApp"=>TITLEAPP,
-        "urlApp"=>URLAPP,
         "header"=>false,
         "footer"=>false,
+        "data"=>array(
+            "titleApp"=>'ObaVisto Login do Usuário',
+            "urlApp"=>URLAPP,
+            "urlFormLogin"=>URLLOGIN)
     ]);
     $page->setTpl("login");
 
@@ -32,52 +34,15 @@ $app->get('/', function(){
 });
 
 
-
-
-
-
-// if(!isSet($_SESSION['usersys']) || $_SESSION['usersys']==''){
-
-//     $app->get('/', function(){
-
-//         $page = new Page([
-//             "titleApp"=>TITLEAPP,
-//             "urlApp"=>URLAPP,
-//             "header"=>false,
-//             "footer"=>false
-//         ]);
-//         $page->setTpl("login");
-    
-//     });
-
-// }else{
-
-
-//     header('location:' . URLAPP);
-
-//     $app->get('/', function(){
-
-//         $page = new Page([
-//             "data"=>array(
-//                     "titleApp"=>TITLEAPP . ' - ' . $_SESSION['TITAPP'],
-//                     "urlApp"=>URLAPP,
-//                     "NAVLEVEL"=>$_SESSION['usersys'])
-//         ]);
-//         $page->setTpl("home-".$_SESSION['usersys']);
-      
-//     });
-
-
-
-// }
-
-
 $app->post('/', function(){
 
+    $userLOGIN  = strtolower($_POST['login']['userlogin']);
+    $pwdLOGIN   = strtolower($_POST['login']['password']);
 
-    if($_POST['userlogin']=='cliente' && $_POST['pwdlogin']=='cliente')
+
+    if($userLOGIN=='cliente' && $pwdLOGIN=='cliente')
     {
-        $_SESSION['usersys'] = $_POST['userlogin'];
+        $_SESSION['usersys'] = $userLOGIN;
         $_SESSION['TITAPP']  = 'Painel do Cliente';
         
 
@@ -85,42 +50,42 @@ $app->post('/', function(){
             "data"=>array(
                     "titleApp"=>TITLEAPP . $_SESSION['TITAPP'],
                     "urlApp"=>URLAPP,
-                    "NAVLEVEL"=>$_POST['userlogin'])
+                    "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $_POST['userlogin']);    
+        $page->setTpl("home-" . $userLOGIN);    
 
     }  
 
-    elseif($_POST['userlogin']=='admin' && $_POST['pwdlogin']=='admin')
+    elseif($userLOGIN=='admin' && $pwdLOGIN=='admin')
     {
 
-        $_SESSION['usersys'] = $_POST['userlogin'];
+        $_SESSION['usersys'] = $userLOGIN;
         $_SESSION['TITAPP']  = 'Painel do Administrador';
 
         $page = new Page([
             "data"=>array(
                     "titleApp"=>TITLEAPP . $_SESSION['TITAPP'],
                     "urlApp"=>URLAPP,
-                    "NAVLEVEL"=>$_POST['userlogin'])
+                    "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $_POST['userlogin']);        
+        $page->setTpl("home-" . $userLOGIN);        
 
 
     } 
 
-    elseif($_POST['userlogin']=='master' && $_POST['pwdlogin']=='master')
+    elseif($userLOGIN=='master' && $pwdLOGIN=='master')
     {
 
-        $_SESSION['usersys'] = $_POST['userlogin'];
+        $_SESSION['usersys'] = $userLOGIN;
         $_SESSION['TITAPP']  = 'MASTER ADMIN';
 
         $page = new Page([
             "data"=>array(
                     "titleApp"=>TITLEAPP . $_SESSION['TITAPP'],
                     "urlApp"=>URLAPP,
-                    "NAVLEVEL"=>$_POST['userlogin'])
+                    "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $_POST['userlogin']);        
+        $page->setTpl("home-" . $userLOGIN);        
 
 
     } 
@@ -139,15 +104,6 @@ $app->post('/', function(){
 
 });
 
-
-
-
-$app->get('/', function(){
-
-    $page = new Page($data);
-    $page->setTpl($startPage);
-
-});
 
 
 $app->get('/login', function(){
@@ -169,25 +125,31 @@ $app->get('/logout', function(){
 
 
     $page = new Page([
-        "titleApp"=>TITLEAPP,
-        "urlApp"=>URLAPP,
         "header"=>false,
-        "footer"=>false
+        "footer"=>false,
+        "data"=>array(
+            "titleApp"=>'ObaVisto Login do Usuário',
+            "urlApp"=>URLAPP,
+            "urlFormLogin"=>URLLOGIN)
     ]);
     $page->setTpl("login");
 
 });
 
 
-$app->get('/cadastre-se', function(){
+$app->get('/cadastro', function(){
 
     $page = new Page([
-        "titleApp"=>TITLEAPP,
-        "urlApp"=>URLAPP,
         "header"=>false,
-        "footer"=>false
+        "footer"=>false,
+        "data"=>array(
+            "titleApp"=>'ObaVisto Formulário de Cadastro',
+            "urlApp"=>URLAPP,
+            "urlFormCadastro"=>URLCADASTRO,
+            "urlFormLogin"=>URLLOGIN,
+            "urlPoliticas"=>URLPPRIVACIDADE)
     ]);
-    $page->setTpl("cadastre-se");
+    $page->setTpl("cadastro");
 
 });
 

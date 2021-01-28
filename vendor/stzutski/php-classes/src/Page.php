@@ -20,7 +20,8 @@ class Page {
 
 
 	public function __construct($opts = array(), $tpl_dir = "/labs/obavisto/views/"){
-		
+        
+
 		$this->options = array_merge($this->defaults, $opts);
 
 		$config = array(
@@ -29,15 +30,18 @@ class Page {
             "debug"         => false,
 	    );
 
-        // var_dump($this->options["data"]);
-        // exit;
+
+        //var_dump($opts);
+        //exit;
+
 
 
 		Tpl::configure( $config );
 
 		$this->tpl = new Tpl;
 
-		$this->setData($this->options["data"]);
+        $this->setData($this->options["data"]);
+        
 
 		if ($this->options["header"] === true) $this->tpl->draw("header");
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +9,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="res/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="res/assets/images/favicon.png" type="image/x-icon">
-    <title>{$titleApp}</title>
+    <title><?php echo htmlspecialchars( $titleApp, ENT_COMPAT, 'UTF-8', FALSE ); ?></title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -34,52 +34,41 @@
   </head>
   <body>
     <!-- login page start-->
-    <div class="container-fluid p-0"> 
+    <div class="container-fluid p-0">
       <div class="row">
         <div class="col-12">     
           <div class="login-card">
             <div>
-              <div><a class="logo" href="{$urlApp}"><img class="img-fluid for-light" src="res/assets/images/logo/logo-login.png" alt="looginpage"><img class="img-fluid for-dark" src="res/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
+              <div><a class="logo" href="<?php echo htmlspecialchars( $urlApp, ENT_COMPAT, 'UTF-8', FALSE ); ?>"><img class="img-fluid for-light" src="res/assets/images/logo/logo-login.png" alt="looginpage"><img class="img-fluid for-dark" src="res/assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
               <div class="login-main"> 
-                <form class="theme-form" method="POST" action="{$urlFormCadastro}">
-                  <h4>Criar Conta</h4>
-                  <p>Informe seu dados para criar sua conta</p>
-                  <div class="form-group">
-                    <label class="col-form-label pt-0">Seu Nome</label>
-                    <div class="form-row">
-                      <div class="col-6">
-                        <input class="form-control" type="text" required="" placeholder="Nome">
-                      </div>
-                      <div class="col-6">
-                        <input class="form-control" type="text" required="" placeholder="Sobrenome">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Telefone</label>
-                    <input class="form-control" type="text" required="" placeholder="(99) 99999-9999">
-                  </div>                  
+                <form class="theme-form" method="POST" action="<?php echo htmlspecialchars( $urlFormLogin, ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                  <h4>Acesso ao Dashboard</h4>
+                  <p>Informe seu e-mail e senha</p>
                   <div class="form-group">
                     <label class="col-form-label">Endereço de e-mail</label>
-                    <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                    <input class="form-control" type="text" required="" name="login[userlogin]">
                   </div>
                   <div class="form-group">
                     <label class="col-form-label">Senha</label>
-                    <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
+                    <input class="form-control" type="password" name="login[password]" required="">
                     <div class="show-hide"><span class="show"></span></div>
                   </div>
                   <div class="form-group mb-0">
                     <div class="checkbox p-0">
                       <input id="checkbox1" type="checkbox">
-                      <label class="text-muted" for="checkbox1">Concordo: <a class="ml-2" href="{$urlPoliticas}" target="_politicas">Política de Privacidade</a></label>
-                    </div>
-                    <button class="btn btn-primary btn-block" type="submit">Criar conta</button>
+                      <label class="text-muted" for="checkbox1">Lembrar dados</label>
+                    </div><a class="link" href="#">Esqueceu a senha?</a>
+                    <button class="btn btn-primary btn-block" type="submit">Acessar</button>
                   </div>
                   <h6 class="text-muted mt-4 or">Ou acesse com</h6>
                   <div class="social mt-4">
-                    <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a><a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a></div>
+                    <!-- <div class="btn-showcase">
+                      <a class="btn btn-light" href="https://www.linkedin.com/login" target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn </a>
+                      <a class="btn btn-light" href="https://twitter.com/login?lang=en" target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a>
+                      <a class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i class="txt-fb" data-feather="facebook"></i>facebook</a>
+                    </div> -->
                   </div>
-                  <p class="mt-4 mb-0">Já cadastrado?<a class="ml-2" href="{$urlFormLogin}">Acessar</a></p>
+                  <p class="mt-4 mb-0">Novo usuário?<a class="ml-2" href="cadastre-se">criei sua conta grátis</a></p>
                 </form>
               </div>
             </div>
