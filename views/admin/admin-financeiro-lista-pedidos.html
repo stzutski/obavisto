@@ -1,10 +1,16 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="page-body p-t-30">
+<div class="page-body p-t-30">
 
   <div class="container-fluid">
 
     <div class="card">
       <div class="card-header">
-        <h5>Lista de Pedidos</h5>
+        
+        {if="$filtro!=''"}
+        <h5>Listando somente pedidos do <b>{$filtro}</b> selecionado.</h5>
+        {else}
+        <h5>Listando de Pedidos.</h5>
+        {/if}
+
         <span>
           Pedidos são compras realizadas em sua plataforma, a lista pedidos contém todo o histórico de pedidos já realizados.
         </span>
@@ -95,6 +101,7 @@
           </table>
         </div>
       </div>
+
 
 
     </div>

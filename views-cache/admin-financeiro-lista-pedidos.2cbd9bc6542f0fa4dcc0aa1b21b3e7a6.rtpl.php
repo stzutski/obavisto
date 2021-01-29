@@ -4,7 +4,16 @@
 
     <div class="card">
       <div class="card-header">
-        <h5>Lista de Pedidos</h5>
+        
+        <?php if( $filtro!='' ){ ?>
+
+        <h5>Listando somente pedidos do <b><?php echo htmlspecialchars( $filtro, ENT_COMPAT, 'UTF-8', FALSE ); ?></b> selecionado.</h5>
+        <?php }else{ ?>
+
+        <h5>Listando de Pedidos.</h5>
+        <?php } ?>
+
+
         <span>
           Pedidos são compras realizadas em sua plataforma, a lista pedidos contém todo o histórico de pedidos já realizados.
         </span>
@@ -95,6 +104,7 @@
           </table>
         </div>
       </div>
+
 
 
     </div>

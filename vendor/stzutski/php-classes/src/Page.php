@@ -30,12 +30,6 @@ class Page {
             "debug"         => false,
 	    );
 
-
-        //var_dump($opts);
-        //exit;
-
-
-
 		Tpl::configure( $config );
 
 		$this->tpl = new Tpl;

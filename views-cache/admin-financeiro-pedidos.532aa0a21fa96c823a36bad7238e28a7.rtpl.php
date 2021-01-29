@@ -6,7 +6,8 @@
       <div class="card-header">
         <h5>Lista de Pedidos</h5>
         <span>
-          Pedidos são compras realizadas em sua plataforma, a lista pedidos contém todo o histórico de pedidos já realizados.
+          Pedidos são compras realizadas em sua plataforma, a lista pedidos contém todo o histórico de pedidos já realizados.<br />
+          Clique nas informações das colunas para listar somente pedidos relacionado ao cliente, serviço, meio de pgto ou status.
         </span>
         <h6 class="font-danger"><small>* Para visualizar mais informações clique sobre o número do pedido.</small></h6>
       </div>

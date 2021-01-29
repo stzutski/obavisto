@@ -11,7 +11,52 @@ $app->get('/financeiro/pedidos', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-financeiro-pedidos");
+    $page->setTpl("admin/admin-financeiro-pedidos");
+
+});
+
+$app->get('/financeiro/lista-filtro/:filtro/:uid', function($filtro, $uid){
+
+    
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . $_SESSION['TITAPP'],
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION['usersys'],
+                "filtro"=>strtoupper($filtro),
+                "uid"=>$uid
+                )
+    ]);
+    $page->setTpl("admin/admin-financeiro-lista-pedidos");
+
+});
+
+
+$app->get('/servicos/listar', function(){
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Serviços Disponíveis' . ' - ' . $_SESSION['TITAPP'],
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION['usersys'])
+    ]);
+    $page->setTpl("admin/admin-servicos-lista");
+
+});
+
+
+$app->get('/servicos/cadastro/:uid', function(){
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Serviços Disponíveis' . ' - ' . $_SESSION['TITAPP'],
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION['usersys'])
+        ]);
+
+
+
+    $page->setTpl("admin/admin-servicos-detalhes");
 
 });
 
@@ -24,7 +69,7 @@ $app->get('/clientes', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-clientes-lista");
+    $page->setTpl("admin/admin-clientes-lista");
 
 });
 
@@ -37,10 +82,9 @@ $app->get('/clientes/cadastro/:uid', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-clientes-cadastro");
+    $page->setTpl("admin/admin-clientes-cadastro");
 
 });
-
 
 
 $app->get('/suporte/chat', function(){
@@ -51,7 +95,7 @@ $app->get('/suporte/chat', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-suporte-chat");
+    $page->setTpl("admin/admin-suporte-chat");
 
 });
 
@@ -64,7 +108,7 @@ $app->get('/suporte/tickets', function(){
                 "urlApp"=>URLAPP,
                 "NAVLEVEL"=>$_SESSION['usersys'])
     ]);
-    $page->setTpl("admin-suporte-tickets");
+    $page->setTpl("admin/admin-suporte-tickets");
 
 });
 
