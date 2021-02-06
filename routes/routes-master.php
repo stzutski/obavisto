@@ -1,143 +1,218 @@
 <?php
-
 use stzutski\Page;
+use stzutski\model\User;
 
+//home do usuario master
+$app->get('/dashboard/master', function(){
 
-$app->get('/administradores', function(){
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Master Dashboard' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-admins-lista");
+    $page->setTpl("home-master");
 
 });
 
+//(MASTER) lista de administradores cadastrados
+$app->get('/dashboard/master/administradores', function(){
 
-$app->get('/administradores/cadastro/:uid', function(){
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    //retorna lista de usuarios
+    $listaUsuarios = User::listAllAdmins();
+    $liAdmins = $listaUsuarios[0];
+     // var_dump($liAdmins);
+     // exit;
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Administrador' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-admins-cad");
+    $page->setTpl("master/master-admins-lista", [
+      'admins'=>$listaUsuarios
+    ]);
+
 
 });
 
+//(MASTER) detalhes do cadastro do administrador (UPDATE)
+$app->get('/dashboard/master/administradores/cadastro/:uid', function($uid){
 
-$app->get('/empresas', function(){
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
 
-    $page = new Page([
-        "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Empresas do Sistema' . ' - ' . $_SESSION['TITAPP'],
-                "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
-    ]);
-    $page->setTpl("master-empresas-lista");
+    if($uid!=0){
+      if($uid!=0){
+      $dataAdmin      = User::getAdminData($uid);
+      $_data_admin    = $dataAdmin[0];
+    }
+    //var_dump($dataAdmin);
+    //exit;
+  }else{
+    $_data_admin = array('nome_user'=>'','sobrenome_user'=>'','email_user'=>'','telefone_user'=>'');
+  }
 
-});
+    $listaEmpresas = array('combo'=>true,'campo'=>'desc_empresa','value'=>'id_empresa','selected'=>'');
+    $empresas       = User::listaEmpresas($listaEmpresas);
 
-
-$app->get('/empresas/cadastro/:uid', function(){
-
-    $page = new Page([
-        "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Empresas' . ' - ' . $_SESSION['TITAPP'],
-                "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
-    ]);
-    $page->setTpl("master-empresas-cad");
-
-});
-
-
-
-
-$app->get('/configuracoes-globais', function(){
+    // var_dump($empresas);
+    // exit;
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Configurações Globais' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-configuracoes");
-
-});
-
-
-
-$app->get('/gateways', function(){
-
-    $page = new Page([
-        "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Portais de Pagamento' . ' - ' . $_SESSION['TITAPP'],
-                "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+    $page->setTpl("master/master-admins-cad", [
+      'dataAdmin'=>$_data_admin,
+      'dataEmpresa'=>$empresas
     ]);
-    $page->setTpl("master-gateways-lista");
-
-});
-
-
-
-$app->get('/gateways/configurar/:uid', function(){
-
-    $page = new Page([
-        "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Configuração de Portal de Pagamento' . ' - ' . $_SESSION['TITAPP'],
-                "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
-    ]);
-    $page->setTpl("master-gateways-conf");
 
 });
 
 
 
+//(MASTER) lista de empresas cadastradas
+$app->get('/dashboard/master/empresas', function(){
 
-$app->get('/servicos', function(){
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Serviços Cadastrados' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-servicos-lista");
+    $page->setTpl("master/master-empresas-lista");
 
 });
 
 
-$app->get('/servicos/cadastro/:uid', function(){
+
+//(MASTER) detalhes do cadastro do administrador (UPDATE)
+$app->get('/dashboard/master/empresas/cadastro/:uid', function($uid){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Serviço' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-servicos-cad");
+    $page->setTpl("master/master-empresas-cad");
+
+});
+
+//(MASTER) pagina com as configuracoes globais do sistema
+$app->get('/dashboard/master/configuracoes-globais', function(){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
+    ]);
+    $page->setTpl("master/master-configuracoes");
 
 });
 
 
-$app->get('/servicos/cadastro/etapas/:uid', function(){
+//(MASTER) lista de gateways cadastrados
+$app->get('/dashboard/master/gateways', function(){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
 
     $page = new Page([
         "data"=>array(
-                "titleApp"=>TITLEAPP . ' - Cadastro de Etapas do Serviço' . ' - ' . $_SESSION['TITAPP'],
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
                 "urlApp"=>URLAPP,
-                "NAVLEVEL"=>"master")
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
     ]);
-    $page->setTpl("master-servicos-etapas-cad");
+    $page->setTpl("master/master-gateways-lista");
 
 });
 
+//(MASTER) configuracoes do gateway
+$app->get('/dashboard/master/gateways/configurar/:uid', function($uid){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
+    ]);
+    $page->setTpl("master/master-gateways-conf");
+
+});
+
+
+//(MASTER) lista de servicos cadastrados
+$app->get('/dashboard/master/servicos', function(){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
+    ]);
+    $page->setTpl("master/master-servicos-lista");
+
+});
+
+//(MASTER) detalhes do cadastro da etapa do servico (UPDATE)
+$app->get('/dashboard/master/servicos/cadastro/etapas/:uid', function($uid){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
+    ]);
+    $page->setTpl("master/master-servicos-etapas-cad");
+
+});
+
+
+//(MASTER) detalhes do cadastro do servico (UPDATE)
+$app->get('/dashboard/master/servicos/cadastro/:uid', function($uid){
+
+    //User::verifyLoginAdmin();
+    User::checkLevel($_SESSION[User::SESSION]['permissao_user'],'master');
+
+    $page = new Page([
+        "data"=>array(
+                "titleApp"=>TITLEAPP . ' - Administradores do Sistema' . ' - ' . TITLEAPP,
+                "urlApp"=>URLAPP,
+                "NAVLEVEL"=>$_SESSION[User::SESSION]['permissao_user'])
+    ]);
+    $page->setTpl("master/master-servicos-cad");
+
+});
 
 
 ?>

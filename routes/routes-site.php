@@ -1,9 +1,20 @@
 <?php
 
 use stzutski\Page;
+use stzutski\Model\User;
 
 
 $app->get('/', function(){
+
+/*
+        $us = new User();
+        $us->login('roberto.rsc@gmail.com','32125');
+
+        $res = $us->getValues();
+
+        var_dump($res);
+        exit;
+*/
 
 
     if(!isSet($_SESSION['usersys']) || $_SESSION['usersys']==''){
@@ -44,7 +55,7 @@ $app->post('/', function(){
     {
         $_SESSION['usersys'] = $userLOGIN;
         $_SESSION['TITAPP']  = 'Painel do Cliente';
-        
+
 
         $page = new Page([
             "data"=>array(
@@ -52,9 +63,9 @@ $app->post('/', function(){
                     "urlApp"=>URLAPP,
                     "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $userLOGIN);    
+        $page->setTpl("home-" . $userLOGIN);
 
-    }  
+    }
 
     elseif($userLOGIN=='admin' && $pwdLOGIN=='admin')
     {
@@ -68,10 +79,10 @@ $app->post('/', function(){
                     "urlApp"=>URLAPP,
                     "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $userLOGIN);        
+        $page->setTpl("home-" . $userLOGIN);
 
 
-    } 
+    }
 
     elseif($userLOGIN=='master' && $pwdLOGIN=='master')
     {
@@ -85,10 +96,10 @@ $app->post('/', function(){
                     "urlApp"=>URLAPP,
                     "NAVLEVEL"=>$userLOGIN)
         ]);
-        $page->setTpl("home-" . $userLOGIN);        
+        $page->setTpl("home-" . $userLOGIN);
 
 
-    } 
+    }
     else{
 
         $page = new Page([
@@ -100,7 +111,7 @@ $app->post('/', function(){
         $page->setTpl("login");
 
     }
-    
+
 
 });
 
@@ -122,6 +133,9 @@ $app->get('/logout', function(){
 
     unset($_SESSION['usersys']);
     session_destroy();
+
+    //User::logout();
+    //header("location: /login");
 
 
     $page = new Page([

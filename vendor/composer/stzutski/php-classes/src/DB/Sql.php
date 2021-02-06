@@ -7,7 +7,7 @@ class Sql {
 	const HOSTNAME = "localhost";
 	const USERNAME = "servidor";
 	const PASSWORD = "Nv32125";
-	const DBNAME = "loja";
+	const DBNAME = "obv";
 
 	private $conn;
 

@@ -5,7 +5,7 @@
               <div class="col-md-12 footer-copyright">
                 <p class="mb-0">Copyright 2020 © obavisto.com.br.</p>
               </div>
-              
+
             </div>
           </div>
         </footer>
@@ -25,12 +25,17 @@
     <!-- Plugins JS start-->
     <script src="res/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
     <script src="res/assets/js/datatable/datatables/datatable.custom.js"></script>
-    <script src="res/assets/js/custom-card/custom-card.js"></script>
+    <!-- <script src="res/assets/js/custom-card/custom-card.js"></script> -->
     <script src="res/assets/js/tooltip-init.js"></script>
+    <script src="res/assets/js/alertify.min.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="res/assets/js/script.js"></script>
+    <script src="res/assets/js/script-acto.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
+    <script type="text/javascript">
+      // alertify.prompt("sou um teste");
+    </script>
   </body>
 </html>
